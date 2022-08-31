@@ -27,6 +27,6 @@ flutter:
   uses-material-design: true
 
   # Add project assets
-  assets:
-    - assets/images
-    - assets/fonts
+  # assets:
+  #   - assets/images
+  #   - assets/fonts
