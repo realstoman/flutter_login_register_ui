@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_login_register_ui/widgets/app_banner.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({Key? key}) : super(key: key);
@@ -14,17 +15,21 @@ class _HomeScreenState extends State<HomeScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: customBgColor,
-      appBar: AppBar(
-        backgroundColor: Colors.transparent,
-        title: const Text('Stoman',
-            style: TextStyle(
-              fontSize: 28.0,
-              fontWeight: FontWeight.bold,
-            )),
-        elevation: 0.0,
-        centerTitle: false,
-      ),
-    );
+        backgroundColor: customBgColor,
+        appBar: AppBar(
+          backgroundColor: Colors.transparent,
+          title: const Text('Stoman',
+              style: TextStyle(
+                fontSize: 28.0,
+                fontWeight: FontWeight.bold,
+              )),
+          elevation: 0.0,
+          centerTitle: false,
+        ),
+        body: Column(
+          children: <Widget>[
+            AppBanner(),
+          ],
+        ));
   }
 }
