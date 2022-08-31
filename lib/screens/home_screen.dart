@@ -8,25 +8,22 @@ class HomeScreen extends StatefulWidget {
 }
 
 class _HomeScreenState extends State<HomeScreen> {
+  // Custom color
+  static const customBgColor = Color.fromARGB(255, 27, 42, 74);
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Color(0x1B2A4A),
+      backgroundColor: customBgColor,
       appBar: AppBar(
-        backgroundColor: Color(0x1B2A4A),
-        // leading: Text('Stoman App', style: TextStyle(fontSize: 28.0, fontWeight: FontWeight.bold)),
-        title: Text('Stoman',
-            style: TextStyle(fontSize: 28.0, fontWeight: FontWeight.bold)),
+        backgroundColor: Colors.transparent,
+        title: const Text('Stoman',
+            style: TextStyle(
+              fontSize: 28.0,
+              fontWeight: FontWeight.bold,
+            )),
         elevation: 0.0,
         centerTitle: false,
-        // actions: <Widget>[
-        //   IconButton(
-        //     icon: Icon(Icons.search),
-        //     iconSize: 30.0,
-        //     color: Colors.white,
-        //     onPressed: () {},
-        //   ),
-        // ],
       ),
     );
   }
