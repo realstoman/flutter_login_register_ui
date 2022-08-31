@@ -29,4 +29,4 @@ flutter:
   # Add project assets
   assets:
     - assets/images/
-    # - assets/fonts
+    - assets/fonts/
