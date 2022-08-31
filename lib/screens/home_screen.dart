@@ -13,24 +13,20 @@ class _HomeScreenState extends State<HomeScreen> {
     return Scaffold(
       backgroundColor: Color(0x1B2A4A),
       appBar: AppBar(
-        leading: IconButton(
-          icon: Icon(Icons.menu),
-          iconSize: 30.0,
-          color: Colors.white,
-          onPressed: () {},
-        ),
+        backgroundColor: Color(0x1B2A4A),
+        // leading: Text('Stoman App', style: TextStyle(fontSize: 28.0, fontWeight: FontWeight.bold)),
         title: Text('Stoman',
             style: TextStyle(fontSize: 28.0, fontWeight: FontWeight.bold)),
         elevation: 0.0,
-        centerTitle: true,
-        actions: <Widget>[
-          IconButton(
-            icon: Icon(Icons.search),
-            iconSize: 30.0,
-            color: Colors.white,
-            onPressed: () {},
-          ),
-        ],
+        centerTitle: false,
+        // actions: <Widget>[
+        //   IconButton(
+        //     icon: Icon(Icons.search),
+        //     iconSize: 30.0,
+        //     color: Colors.white,
+        //     onPressed: () {},
+        //   ),
+        // ],
       ),
     );
   }
