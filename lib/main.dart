@@ -7,14 +7,14 @@ class MyApp extends StatelessWidget {
   const MyApp({Key? key}) : super(key: key);
 
   // Custom color
-  static const primaryColor = Color(0x1B2A4A);
+  static const primaryColor = Color.fromARGB(255, 27, 42, 74);
 
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      title: 'Stoman',
+      // title: 'Stoman',
       theme: ThemeData(
         primaryColor: primaryColor,
       ),

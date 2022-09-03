@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_login_register_ui/widgets/app_banner.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({Key? key}) : super(key: key);
@@ -8,26 +9,27 @@ class HomeScreen extends StatefulWidget {
 }
 
 class _HomeScreenState extends State<HomeScreen> {
+  // Custom color
+  static const customBgColor = Color.fromARGB(255, 27, 42, 74);
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Color(0x1B2A4A),
-      appBar: AppBar(
-        backgroundColor: Color(0x1B2A4A),
-        // leading: Text('Stoman App', style: TextStyle(fontSize: 28.0, fontWeight: FontWeight.bold)),
-        title: Text('Stoman',
-            style: TextStyle(fontSize: 28.0, fontWeight: FontWeight.bold)),
-        elevation: 0.0,
-        centerTitle: false,
-        // actions: <Widget>[
-        //   IconButton(
-        //     icon: Icon(Icons.search),
-        //     iconSize: 30.0,
-        //     color: Colors.white,
-        //     onPressed: () {},
-        //   ),
-        // ],
-      ),
-    );
+        backgroundColor: customBgColor,
+        appBar: AppBar(
+          backgroundColor: Colors.transparent,
+          title: const Text('Stoman',
+              style: TextStyle(
+                fontSize: 28.0,
+                fontWeight: FontWeight.bold,
+              )),
+          elevation: 0.0,
+          centerTitle: false,
+        ),
+        body: Column(
+          children: <Widget>[
+            AppBanner(),
+          ],
+        ));
   }
 }

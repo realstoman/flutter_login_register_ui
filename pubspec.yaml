@@ -12,6 +12,7 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
+    flutter_svg: ^1.1.4
 
   cupertino_icons: ^1.0.2
 
@@ -27,6 +28,6 @@ flutter:
   uses-material-design: true
 
   # Add project assets
-  # assets:
-  #   - assets/images
-  #   - assets/fonts
+  assets:
+    - assets/images/
+    - assets/fonts/
