@@ -13,6 +13,7 @@ class AppBanner extends StatelessWidget {
           CircleAvatar(
             radius: 5.0,
             // backgroundImage: AssetImage('/learning.svg'),
+            // child: SvgImage('assets/images/learning.svg'),
           ),
           SizedBox(height: 6.0),
           Text('Hello'),
