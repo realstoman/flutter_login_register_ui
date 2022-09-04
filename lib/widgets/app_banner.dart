@@ -9,23 +9,24 @@ class AppBanner extends StatelessWidget {
     return Padding(
       padding: const EdgeInsets.all(12.0),
       child: Container(
+          alignment: Alignment.center,
           child: Column(
-        children: const <Widget>[
-          // CircleAvatar(
-          //   radius: 5.0,
-          //   // backgroundImage: AssetImage('/learning.svg'),
-          //   // child: SvgImage('assets/images/learning.svg'),
-          // ),
-          // SizedBox(
-          //   height: 100,
-          //   width: 100,
-          //   child: SvgPicture.asset("assets/flag.svg", //asset location
-          //       color: Colors.red, //svg color
-          //       semanticsLabel: 'SVG From asset folder.'),
-          // ),
-          Text('Hello'),
-        ],
-      )),
+            children: <Widget>[
+              SizedBox(
+                width: 300,
+                child: Image.asset('assets/images/learning.png'),
+              ),
+              Padding(
+                padding: const EdgeInsets.all(14.0),
+                child: const Text('Discover Lifelong Learning',
+                    style: TextStyle(
+                      color: Colors.white,
+                      fontWeight: FontWeight.bold,
+                      fontSize: 22,
+                    )),
+              ),
+            ],
+          )),
     );
   }
 }
