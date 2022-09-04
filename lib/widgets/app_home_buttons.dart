@@ -8,8 +8,6 @@ class AppHomeButtons extends StatefulWidget {
 }
 
 class _AppHomeButtonsState extends State<AppHomeButtons> {
-  late var myName = 'Stoman';
-
   @override
   Widget build(BuildContext context) {
     return Container();
