@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_login_register_ui/widgets/app_banner.dart';
+import 'package:flutter_login_register_ui/widgets/app_home_buttons.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({Key? key}) : super(key: key);
@@ -36,6 +37,7 @@ class _HomeScreenState extends State<HomeScreen> {
         body: Column(
           children: const <Widget>[
             AppBanner(),
+            AppHomeButtons(),
           ],
         ));
   }
