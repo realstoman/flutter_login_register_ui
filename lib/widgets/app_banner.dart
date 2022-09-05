@@ -16,11 +16,12 @@ class AppBanner extends StatelessWidget {
                 width: 300,
                 child: Image.asset('assets/images/learning.png'),
               ),
-              Padding(
-                padding: const EdgeInsets.all(14.0),
-                child: const Text('Discover Lifelong Learning',
+              const Padding(
+                padding: EdgeInsets.all(14.0),
+                child: Text('Discover Lifelong Learning',
                     style: TextStyle(
                       color: Colors.white,
+                      fontFamily: 'Arial',
                       fontWeight: FontWeight.bold,
                       fontSize: 22,
                     )),

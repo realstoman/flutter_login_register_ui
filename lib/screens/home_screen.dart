@@ -18,16 +18,23 @@ class _HomeScreenState extends State<HomeScreen> {
         backgroundColor: customBgColor,
         appBar: AppBar(
           backgroundColor: Colors.transparent,
-          title: const Text('Stoman',
-              style: TextStyle(
-                fontSize: 28.0,
-                fontWeight: FontWeight.bold,
-              )),
+          title: const Padding(
+            padding: EdgeInsets.only(
+              left: 10.0,
+              top: 33.0,
+            ),
+            child: Text('Stoman',
+                style: TextStyle(
+                  fontSize: 26.0,
+                  fontFamily: 'Arial',
+                  fontWeight: FontWeight.bold,
+                )),
+          ),
           elevation: 0.0,
           centerTitle: false,
         ),
         body: Column(
-          children: <Widget>[
+          children: const <Widget>[
             AppBanner(),
           ],
         ));
