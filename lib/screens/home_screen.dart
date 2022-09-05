@@ -24,7 +24,7 @@ class _HomeScreenState extends State<HomeScreen> {
               left: 10.0,
               top: 33.0,
             ),
-            child: Text('Stoman',
+            child: Text('Kabul Learn',
                 style: TextStyle(
                   fontSize: 26.0,
                   fontFamily: 'Arial',

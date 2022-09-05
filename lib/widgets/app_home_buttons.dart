@@ -18,12 +18,12 @@ class _AppHomeButtonsState extends State<AppHomeButtons> {
             children: const <Widget>[
               Padding(
                 padding: EdgeInsets.all(14.0),
-                child: Text('Discover Lifelong Learning',
+                child: Text('Sign In or Join now',
                     style: TextStyle(
                       color: Colors.white,
                       fontFamily: 'Arial',
-                      fontWeight: FontWeight.bold,
-                      fontSize: 22,
+                      fontWeight: FontWeight.w500,
+                      fontSize: 23,
                     )),
               ),
             ],
