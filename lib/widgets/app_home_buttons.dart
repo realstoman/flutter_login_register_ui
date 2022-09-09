@@ -40,7 +40,7 @@ class _AppHomeButtonsState extends State<AppHomeButtons> {
                       onPressed: () => Navigator.of(context).push(
                           MaterialPageRoute(
                               builder: (context) => const RegisterScreen())),
-                      child: const Text('Continue with Google'),
+                      child: const Text('Continue with GitHub'),
                     ),
                     OutlinedButton(
                       style: OutlinedButton.styleFrom(
@@ -50,7 +50,7 @@ class _AppHomeButtonsState extends State<AppHomeButtons> {
                       onPressed: () => Navigator.of(context).push(
                           MaterialPageRoute(
                               builder: (context) => const RegisterScreen())),
-                      child: const Text('Continue with GitHub'),
+                      child: const Text('Continue with Google'),
                     ),
                     OutlinedButton(
                       style: OutlinedButton.styleFrom(
