@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_login_register_ui/screens/login_screen.dart';
 import 'package:flutter_login_register_ui/screens/register_screen.dart';
 
 class AppHomeButtons extends StatefulWidget {
@@ -50,6 +51,15 @@ class _AppHomeButtonsState extends State<AppHomeButtons> {
                           MaterialPageRoute(
                               builder: (context) => const RegisterScreen())),
                       child: const Text('Continue with GitHub'),
+                    ),
+                    OutlinedButton(
+                      style: OutlinedButton.styleFrom(
+                        primary: Colors.white,
+                      ),
+                      onPressed: () => Navigator.of(context).push(
+                          MaterialPageRoute(
+                              builder: (context) => const LoginScreen())),
+                      child: const Text('Login instead'),
                     ),
                   ],
                 ),
