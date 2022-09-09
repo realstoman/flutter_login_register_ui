@@ -26,6 +26,18 @@ class _RegisterScreenState extends State<RegisterScreen> {
         elevation: 0.0,
         centerTitle: false,
       ),
+      body: Column(children: const <Widget>[
+        Padding(
+          padding: EdgeInsets.all(14.0),
+          child: Text('Create an account',
+              style: TextStyle(
+                color: Colors.white,
+                fontFamily: 'Arial',
+                fontWeight: FontWeight.w500,
+                fontSize: 23,
+              )),
+        ),
+      ]),
     );
   }
 }

@@ -26,6 +26,18 @@ class _LoginScreenState extends State<LoginScreen> {
         elevation: 0.0,
         centerTitle: false,
       ),
+      body: Column(children: const <Widget>[
+        Padding(
+          padding: EdgeInsets.all(14.0),
+          child: Text('Login to your account',
+              style: TextStyle(
+                color: Colors.white,
+                fontFamily: 'Arial',
+                fontWeight: FontWeight.w500,
+                fontSize: 23,
+              )),
+        ),
+      ]),
     );
   }
 }
