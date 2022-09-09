@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_login_register_ui/screens/register_screen.dart';
 
 class AppHomeButtons extends StatefulWidget {
   const AppHomeButtons({Key? key}) : super(key: key);
@@ -15,16 +16,43 @@ class _AppHomeButtonsState extends State<AppHomeButtons> {
       child: Container(
           alignment: Alignment.center,
           child: Column(
-            children: const <Widget>[
+            children: <Widget>[
               Padding(
-                padding: EdgeInsets.all(14.0),
-                child: Text('Sign In or Join now',
-                    style: TextStyle(
-                      color: Colors.white,
-                      fontFamily: 'Arial',
-                      fontWeight: FontWeight.w500,
-                      fontSize: 23,
-                    )),
+                padding: const EdgeInsets.all(14.0),
+                child: Column(
+                  children: <Widget>[
+                    OutlinedButton(
+                      style: OutlinedButton.styleFrom(
+                        backgroundColor: Colors.white,
+                        primary: Colors.black87,
+                      ),
+                      onPressed: () => Navigator.of(context).push(
+                          MaterialPageRoute(
+                              builder: (context) => const RegisterScreen())),
+                      child: const Text('Join Now'),
+                    ),
+                    OutlinedButton(
+                      style: OutlinedButton.styleFrom(
+                        backgroundColor: Colors.white,
+                        primary: Colors.black87,
+                      ),
+                      onPressed: () => Navigator.of(context).push(
+                          MaterialPageRoute(
+                              builder: (context) => const RegisterScreen())),
+                      child: const Text('Continue with Google'),
+                    ),
+                    OutlinedButton(
+                      style: OutlinedButton.styleFrom(
+                        backgroundColor: Colors.white,
+                        primary: Colors.black87,
+                      ),
+                      onPressed: () => Navigator.of(context).push(
+                          MaterialPageRoute(
+                              builder: (context) => const RegisterScreen())),
+                      child: const Text('Continue with GitHub'),
+                    ),
+                  ],
+                ),
               ),
             ],
           )),
