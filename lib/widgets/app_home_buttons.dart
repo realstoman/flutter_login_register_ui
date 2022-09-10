@@ -40,7 +40,10 @@ class _AppHomeButtonsState extends State<AppHomeButtons> {
                               MaterialPageRoute(
                                   builder: (context) =>
                                       const RegisterScreen())),
-                          child: const Text('Join now'),
+                          child: const Text('Join now',
+                              style: TextStyle(
+                                  fontFamily: 'GeneralSans',
+                                  fontWeight: FontWeight.w500)),
                         ),
                       ),
                     ),
@@ -59,7 +62,10 @@ class _AppHomeButtonsState extends State<AppHomeButtons> {
                         onPressed: () => Navigator.of(context).push(
                             MaterialPageRoute(
                                 builder: (context) => const RegisterScreen())),
-                        child: const Text('Continue with GitHub'),
+                        child: const Text('Continue with GitHub',
+                            style: TextStyle(
+                                fontFamily: 'GeneralSans',
+                                fontWeight: FontWeight.w400)),
                       ),
                     ),
                     Padding(
@@ -80,19 +86,25 @@ class _AppHomeButtonsState extends State<AppHomeButtons> {
                               MaterialPageRoute(
                                   builder: (context) =>
                                       const RegisterScreen())),
-                          child: const Text('Continue with Google'),
+                          child: const Text('Continue with Google',
+                              style: TextStyle(
+                                  fontFamily: 'GeneralSans',
+                                  fontWeight: FontWeight.w400)),
                         ),
                       ),
                     ),
                     OutlinedButton(
                       style: OutlinedButton.styleFrom(
                           primary: Colors.white,
-                          textStyle: const TextStyle(fontSize: 18),
+                          textStyle: const TextStyle(fontSize: 16),
                           side: const BorderSide(color: Colors.transparent)),
                       onPressed: () => Navigator.of(context).push(
                           MaterialPageRoute(
                               builder: (context) => const LoginScreen())),
-                      child: const Text('Sign in'),
+                      child: const Text('Sign in',
+                          style: TextStyle(
+                              fontFamily: 'GeneralSans',
+                              fontWeight: FontWeight.w500)),
                     ),
                   ],
                 ),

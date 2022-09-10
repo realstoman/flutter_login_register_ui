@@ -27,8 +27,8 @@ class _HomeScreenState extends State<HomeScreen> {
             child: Text('Skill Academy',
                 style: TextStyle(
                   fontSize: 24.0,
-                  fontFamily: 'Arial',
-                  fontWeight: FontWeight.bold,
+                  fontFamily: 'GeneralSans',
+                  fontWeight: FontWeight.w500,
                 )),
           ),
           elevation: 0.0,

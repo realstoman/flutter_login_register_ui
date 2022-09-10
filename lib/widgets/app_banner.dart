@@ -24,8 +24,8 @@ class AppBanner extends StatelessWidget {
                 child: Text('Discover Lifelong Learning',
                     style: TextStyle(
                       color: Colors.white,
-                      fontFamily: 'Arial',
-                      fontWeight: FontWeight.w500,
+                      fontFamily: 'GeneralSans',
+                      fontWeight: FontWeight.w400,
                       fontSize: 22,
                     )),
               ),
