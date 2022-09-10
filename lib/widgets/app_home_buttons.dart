@@ -23,15 +23,19 @@ class _AppHomeButtonsState extends State<AppHomeButtons> {
                 child: Column(
                   children: <Widget>[
                     Padding(
-                      padding: const EdgeInsets.symmetric(vertical: 3.0),
+                      padding: const EdgeInsets.symmetric(vertical: 10.0),
                       child: SizedBox(
                         width: 280,
                         height: 42,
                         child: OutlinedButton(
                           style: OutlinedButton.styleFrom(
-                              backgroundColor: Colors.white,
-                              primary: Colors.black87,
-                              textStyle: const TextStyle(fontSize: 16)),
+                            backgroundColor: Colors.white,
+                            primary: Colors.black87,
+                            textStyle: const TextStyle(fontSize: 16),
+                            shape: const RoundedRectangleBorder(
+                                borderRadius:
+                                    BorderRadius.all(Radius.circular(20))),
+                          ),
                           onPressed: () => Navigator.of(context).push(
                               MaterialPageRoute(
                                   builder: (context) =>
@@ -40,34 +44,38 @@ class _AppHomeButtonsState extends State<AppHomeButtons> {
                         ),
                       ),
                     ),
-                    Padding(
-                      padding: const EdgeInsets.symmetric(vertical: 3.0),
-                      child: SizedBox(
-                        width: 280,
-                        height: 42,
-                        child: OutlinedButton(
-                          style: OutlinedButton.styleFrom(
-                              backgroundColor: Colors.white,
-                              primary: Colors.black87,
-                              textStyle: const TextStyle(fontSize: 16)),
-                          onPressed: () => Navigator.of(context).push(
-                              MaterialPageRoute(
-                                  builder: (context) =>
-                                      const RegisterScreen())),
-                          child: const Text('Continue with GitHub'),
+                    SizedBox(
+                      width: 280,
+                      height: 42,
+                      child: OutlinedButton(
+                        style: OutlinedButton.styleFrom(
+                          primary: Colors.white,
+                          textStyle: const TextStyle(fontSize: 16),
+                          side: const BorderSide(color: Colors.white60),
+                          shape: const RoundedRectangleBorder(
+                              borderRadius:
+                                  BorderRadius.all(Radius.circular(20))),
                         ),
+                        onPressed: () => Navigator.of(context).push(
+                            MaterialPageRoute(
+                                builder: (context) => const RegisterScreen())),
+                        child: const Text('Continue with GitHub'),
                       ),
                     ),
                     Padding(
-                      padding: const EdgeInsets.symmetric(vertical: 3.0),
+                      padding: const EdgeInsets.symmetric(vertical: 10.0),
                       child: SizedBox(
                         width: 280,
                         height: 42,
                         child: OutlinedButton(
                           style: OutlinedButton.styleFrom(
-                              backgroundColor: Colors.white,
-                              primary: Colors.black87,
-                              textStyle: const TextStyle(fontSize: 16)),
+                            primary: Colors.white,
+                            textStyle: const TextStyle(fontSize: 16),
+                            side: const BorderSide(color: Colors.white60),
+                            shape: const RoundedRectangleBorder(
+                                borderRadius:
+                                    BorderRadius.all(Radius.circular(20))),
+                          ),
                           onPressed: () => Navigator.of(context).push(
                               MaterialPageRoute(
                                   builder: (context) =>
@@ -79,7 +87,8 @@ class _AppHomeButtonsState extends State<AppHomeButtons> {
                     OutlinedButton(
                       style: OutlinedButton.styleFrom(
                           primary: Colors.white,
-                          textStyle: const TextStyle(fontSize: 18)),
+                          textStyle: const TextStyle(fontSize: 18),
+                          side: const BorderSide(color: Colors.transparent)),
                       onPressed: () => Navigator.of(context).push(
                           MaterialPageRoute(
                               builder: (context) => const LoginScreen())),
