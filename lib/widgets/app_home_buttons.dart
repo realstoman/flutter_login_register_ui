@@ -22,40 +22,52 @@ class _AppHomeButtonsState extends State<AppHomeButtons> {
                 padding: const EdgeInsets.all(14.0),
                 child: Column(
                   children: <Widget>[
-                    OutlinedButton(
-                      style: OutlinedButton.styleFrom(
-                        backgroundColor: Colors.white,
-                        primary: Colors.black87,
+                    SizedBox(
+                      width: 280,
+                      height: 42,
+                      child: OutlinedButton(
+                        style: OutlinedButton.styleFrom(
+                            backgroundColor: Colors.white,
+                            primary: Colors.black87,
+                            textStyle: const TextStyle(fontSize: 16)),
+                        onPressed: () => Navigator.of(context).push(
+                            MaterialPageRoute(
+                                builder: (context) => const RegisterScreen())),
+                        child: const Text('Join Now'),
                       ),
-                      onPressed: () => Navigator.of(context).push(
-                          MaterialPageRoute(
-                              builder: (context) => const RegisterScreen())),
-                      child: const Text('Join Now'),
+                    ),
+                    SizedBox(
+                      width: 280,
+                      height: 42,
+                      child: OutlinedButton(
+                        style: OutlinedButton.styleFrom(
+                            backgroundColor: Colors.white,
+                            primary: Colors.black87,
+                            textStyle: const TextStyle(fontSize: 16)),
+                        onPressed: () => Navigator.of(context).push(
+                            MaterialPageRoute(
+                                builder: (context) => const RegisterScreen())),
+                        child: const Text('Continue with GitHub'),
+                      ),
+                    ),
+                    SizedBox(
+                      width: 280,
+                      height: 42,
+                      child: OutlinedButton(
+                        style: OutlinedButton.styleFrom(
+                            backgroundColor: Colors.white,
+                            primary: Colors.black87,
+                            textStyle: const TextStyle(fontSize: 16)),
+                        onPressed: () => Navigator.of(context).push(
+                            MaterialPageRoute(
+                                builder: (context) => const RegisterScreen())),
+                        child: const Text('Continue with Google'),
+                      ),
                     ),
                     OutlinedButton(
                       style: OutlinedButton.styleFrom(
-                        backgroundColor: Colors.white,
-                        primary: Colors.black87,
-                      ),
-                      onPressed: () => Navigator.of(context).push(
-                          MaterialPageRoute(
-                              builder: (context) => const RegisterScreen())),
-                      child: const Text('Continue with GitHub'),
-                    ),
-                    OutlinedButton(
-                      style: OutlinedButton.styleFrom(
-                        backgroundColor: Colors.white,
-                        primary: Colors.black87,
-                      ),
-                      onPressed: () => Navigator.of(context).push(
-                          MaterialPageRoute(
-                              builder: (context) => const RegisterScreen())),
-                      child: const Text('Continue with Google'),
-                    ),
-                    OutlinedButton(
-                      style: OutlinedButton.styleFrom(
-                        primary: Colors.white,
-                      ),
+                          primary: Colors.white,
+                          textStyle: const TextStyle(fontSize: 16)),
                       onPressed: () => Navigator.of(context).push(
                           MaterialPageRoute(
                               builder: (context) => const LoginScreen())),
