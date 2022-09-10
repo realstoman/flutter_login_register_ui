@@ -22,13 +22,13 @@ class _HomeScreenState extends State<HomeScreen> {
           title: const Padding(
             padding: EdgeInsets.only(
               left: 10.0,
-              top: 33.0,
+              top: 27.0,
             ),
-            child: Text('Kabul Learn',
+            child: Text('Skill Academy',
                 style: TextStyle(
-                  fontSize: 26.0,
-                  fontFamily: 'Arial',
-                  fontWeight: FontWeight.bold,
+                  fontSize: 24.0,
+                  fontFamily: 'GeneralSans',
+                  fontWeight: FontWeight.w500,
                 )),
           ),
           elevation: 0.0,

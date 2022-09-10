@@ -17,6 +17,7 @@ class MyApp extends StatelessWidget {
       // title: 'Stoman',
       theme: ThemeData(
         primaryColor: primaryColor,
+        fontFamily: 'GeneralSans',
       ),
       home: const HomeScreen(),
     );
