@@ -22,56 +22,68 @@ class _AppHomeButtonsState extends State<AppHomeButtons> {
                 padding: const EdgeInsets.all(14.0),
                 child: Column(
                   children: <Widget>[
-                    SizedBox(
-                      width: 280,
-                      height: 42,
-                      child: OutlinedButton(
-                        style: OutlinedButton.styleFrom(
-                            backgroundColor: Colors.white,
-                            primary: Colors.black87,
-                            textStyle: const TextStyle(fontSize: 16)),
-                        onPressed: () => Navigator.of(context).push(
-                            MaterialPageRoute(
-                                builder: (context) => const RegisterScreen())),
-                        child: const Text('Join Now'),
+                    Padding(
+                      padding: const EdgeInsets.symmetric(vertical: 3.0),
+                      child: SizedBox(
+                        width: 280,
+                        height: 42,
+                        child: OutlinedButton(
+                          style: OutlinedButton.styleFrom(
+                              backgroundColor: Colors.white,
+                              primary: Colors.black87,
+                              textStyle: const TextStyle(fontSize: 16)),
+                          onPressed: () => Navigator.of(context).push(
+                              MaterialPageRoute(
+                                  builder: (context) =>
+                                      const RegisterScreen())),
+                          child: const Text('Join now'),
+                        ),
                       ),
                     ),
-                    SizedBox(
-                      width: 280,
-                      height: 42,
-                      child: OutlinedButton(
-                        style: OutlinedButton.styleFrom(
-                            backgroundColor: Colors.white,
-                            primary: Colors.black87,
-                            textStyle: const TextStyle(fontSize: 16)),
-                        onPressed: () => Navigator.of(context).push(
-                            MaterialPageRoute(
-                                builder: (context) => const RegisterScreen())),
-                        child: const Text('Continue with GitHub'),
+                    Padding(
+                      padding: const EdgeInsets.symmetric(vertical: 3.0),
+                      child: SizedBox(
+                        width: 280,
+                        height: 42,
+                        child: OutlinedButton(
+                          style: OutlinedButton.styleFrom(
+                              backgroundColor: Colors.white,
+                              primary: Colors.black87,
+                              textStyle: const TextStyle(fontSize: 16)),
+                          onPressed: () => Navigator.of(context).push(
+                              MaterialPageRoute(
+                                  builder: (context) =>
+                                      const RegisterScreen())),
+                          child: const Text('Continue with GitHub'),
+                        ),
                       ),
                     ),
-                    SizedBox(
-                      width: 280,
-                      height: 42,
-                      child: OutlinedButton(
-                        style: OutlinedButton.styleFrom(
-                            backgroundColor: Colors.white,
-                            primary: Colors.black87,
-                            textStyle: const TextStyle(fontSize: 16)),
-                        onPressed: () => Navigator.of(context).push(
-                            MaterialPageRoute(
-                                builder: (context) => const RegisterScreen())),
-                        child: const Text('Continue with Google'),
+                    Padding(
+                      padding: const EdgeInsets.symmetric(vertical: 3.0),
+                      child: SizedBox(
+                        width: 280,
+                        height: 42,
+                        child: OutlinedButton(
+                          style: OutlinedButton.styleFrom(
+                              backgroundColor: Colors.white,
+                              primary: Colors.black87,
+                              textStyle: const TextStyle(fontSize: 16)),
+                          onPressed: () => Navigator.of(context).push(
+                              MaterialPageRoute(
+                                  builder: (context) =>
+                                      const RegisterScreen())),
+                          child: const Text('Continue with Google'),
+                        ),
                       ),
                     ),
                     OutlinedButton(
                       style: OutlinedButton.styleFrom(
                           primary: Colors.white,
-                          textStyle: const TextStyle(fontSize: 16)),
+                          textStyle: const TextStyle(fontSize: 18)),
                       onPressed: () => Navigator.of(context).push(
                           MaterialPageRoute(
                               builder: (context) => const LoginScreen())),
-                      child: const Text('Login instead'),
+                      child: const Text('Sign in'),
                     ),
                   ],
                 ),
