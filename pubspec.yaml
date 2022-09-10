@@ -31,3 +31,12 @@ flutter:
   assets:
     - assets/images/
     - assets/fonts/
+  
+  fonts:
+    - family: GeneralSans
+      fonts:
+        - asset: fonts/GeneralSans-Light.ttf
+        - asset: fonts/GeneralSans-Regular.ttf
+        - asset: fonts/GeneralSans-Medium.ttf
+        - asset: fonts/GeneralSans-Semibold.ttf
+        - asset: fonts/GeneralSans-Bold.ttf
