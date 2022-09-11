@@ -9,7 +9,7 @@ class LoginScreen extends StatefulWidget {
 
 class _LoginScreenState extends State<LoginScreen> {
   // Custom color
-  static const customBgColor = Color.fromARGB(255, 27, 42, 74);
+  static const customBgColor = Color.fromARGB(255, 255, 255, 255);
 
   Widget _buildEmailTF() {
     return Column(
@@ -65,8 +65,32 @@ class _LoginScreenState extends State<LoginScreen> {
         ]);
   }
 
+  String _email = '';
+  String _password = '';
+
+  // Note: This is a form key which is used to hold the state of our form and this is the recommended way to do so.
+  final GlobalKey<FormState> _formKey = GlobalKey<FormState>();
+
+  Widget _buildEmailField() {
+    return TextFormField(
+      decoration: const InputDecoration(labelText: 'Email'),
+    );
+  }
+
+  Widget _buildPasswordField() {
+    return TextFormField(
+      decoration: const InputDecoration(labelText: 'Password'),
+    );
+  }
+
   @override
   Widget build(BuildContext context) {
+    final ButtonStyle btnStyle = ElevatedButton.styleFrom(
+        textStyle: const TextStyle(
+            fontSize: 20,
+            fontFamily: 'GeneralSans',
+            fontWeight: FontWeight.w500));
+
     return Scaffold(
       backgroundColor: customBgColor,
       appBar: AppBar(
@@ -91,18 +115,31 @@ class _LoginScreenState extends State<LoginScreen> {
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: <Widget>[
-                  const Text('Sign In',
+                  const Text('Sign in to Skill Academy',
                       style: TextStyle(
-                          color: Colors.white,
+                          color: Colors.black87,
                           fontFamily: 'GeneralSans',
-                          fontSize: 30.0,
+                          fontSize: 26.0,
                           fontWeight: FontWeight.w500)),
-                  const SizedBox(height: 30.0),
-                  // Email input field
-                  _buildEmailTF(),
-                  const SizedBox(height: 10.0),
-                  // Password input field
-                  _buildPasswordTF(),
+                  Container(
+                    margin: const EdgeInsets.all(20),
+                    child: Form(
+                      child: Column(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: <Widget>[
+                          _buildEmailField(),
+                          const SizedBox(height: 8.0),
+                          _buildPasswordField(),
+                          const SizedBox(height: 50.0),
+                          ElevatedButton(
+                            style: btnStyle,
+                            onPressed: () {},
+                            child: const Text('Sign in'),
+                          ),
+                        ],
+                      ),
+                    ),
+                  ),
                 ],
               ),
             ),
