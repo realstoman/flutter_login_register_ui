@@ -23,15 +23,18 @@ class _AppHomeButtonsState extends State<AppHomeButtons> {
                 child: Column(
                   children: <Widget>[
                     Padding(
-                      padding: const EdgeInsets.symmetric(vertical: 10.0),
+                      padding: const EdgeInsets.symmetric(vertical: 8.0),
                       child: SizedBox(
                         width: 290,
-                        height: 42,
+                        height: 44,
                         child: OutlinedButton(
                           style: OutlinedButton.styleFrom(
                             backgroundColor: Colors.white,
                             primary: Colors.black87,
                             textStyle: const TextStyle(fontSize: 18),
+                            side:
+                                const BorderSide(color: Colors.white, width: 1),
+                            elevation: 3,
                             shape: const RoundedRectangleBorder(
                                 borderRadius:
                                     BorderRadius.all(Radius.circular(20))),
@@ -49,12 +52,13 @@ class _AppHomeButtonsState extends State<AppHomeButtons> {
                     ),
                     SizedBox(
                       width: 290,
-                      height: 42,
+                      height: 44,
                       child: OutlinedButton(
                         style: OutlinedButton.styleFrom(
                           primary: Colors.white,
                           textStyle: const TextStyle(fontSize: 18),
-                          side: const BorderSide(color: Colors.white60),
+                          side: const BorderSide(color: Colors.white, width: 1),
+                          elevation: 3,
                           shape: const RoundedRectangleBorder(
                               borderRadius:
                                   BorderRadius.all(Radius.circular(20))),
@@ -75,21 +79,23 @@ class _AppHomeButtonsState extends State<AppHomeButtons> {
                             const Text('Continue with GitHub',
                                 style: TextStyle(
                                     fontFamily: 'GeneralSans',
-                                    fontWeight: FontWeight.w400)),
+                                    fontWeight: FontWeight.w500)),
                           ],
                         ),
                       ),
                     ),
                     Padding(
-                      padding: const EdgeInsets.symmetric(vertical: 10.0),
+                      padding: const EdgeInsets.symmetric(vertical: 8.0),
                       child: SizedBox(
                         width: 290,
-                        height: 42,
+                        height: 44,
                         child: OutlinedButton(
                           style: OutlinedButton.styleFrom(
                             primary: Colors.white,
                             textStyle: const TextStyle(fontSize: 18),
-                            side: const BorderSide(color: Colors.white60),
+                            side:
+                                const BorderSide(color: Colors.white, width: 1),
+                            elevation: 3,
                             shape: const RoundedRectangleBorder(
                                 borderRadius:
                                     BorderRadius.all(Radius.circular(20))),
@@ -111,7 +117,7 @@ class _AppHomeButtonsState extends State<AppHomeButtons> {
                               const Text('Continue with Google',
                                   style: TextStyle(
                                       fontFamily: 'GeneralSans',
-                                      fontWeight: FontWeight.w400)),
+                                      fontWeight: FontWeight.w500)),
                             ],
                           ),
                         ),

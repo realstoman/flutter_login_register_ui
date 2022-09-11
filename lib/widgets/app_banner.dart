@@ -25,7 +25,7 @@ class AppBanner extends StatelessWidget {
                     style: TextStyle(
                       color: Colors.white,
                       fontFamily: 'GeneralSans',
-                      fontWeight: FontWeight.w400,
+                      fontWeight: FontWeight.w500,
                       fontSize: 22,
                     )),
               ),
