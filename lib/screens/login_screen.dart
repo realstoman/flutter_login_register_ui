@@ -28,13 +28,13 @@ class _LoginScreenState extends State<LoginScreen> {
         focusedBorder: OutlineInputBorder(
           borderRadius: BorderRadius.circular(5.0),
           borderSide: const BorderSide(
-            color: Color.fromARGB(255, 8, 61, 104),
+            color: Color.fromARGB(255, 27, 42, 74),
           ),
         ),
         enabledBorder: OutlineInputBorder(
           borderRadius: BorderRadius.circular(5.0),
           borderSide: const BorderSide(
-            color: Color.fromARGB(255, 177, 177, 177),
+            color: Color.fromARGB(131, 177, 177, 177),
             width: 1.0,
           ),
         ),
@@ -53,13 +53,13 @@ class _LoginScreenState extends State<LoginScreen> {
         focusedBorder: OutlineInputBorder(
           borderRadius: BorderRadius.circular(5.0),
           borderSide: const BorderSide(
-            color: Color.fromARGB(255, 8, 61, 104),
+            color: Color.fromARGB(255, 27, 42, 74),
           ),
         ),
         enabledBorder: OutlineInputBorder(
           borderRadius: BorderRadius.circular(5.0),
           borderSide: const BorderSide(
-            color: Color.fromARGB(255, 177, 177, 177),
+            color: Color.fromARGB(131, 177, 177, 177),
             width: 1.0,
           ),
         ),
@@ -70,6 +70,7 @@ class _LoginScreenState extends State<LoginScreen> {
   @override
   Widget build(BuildContext context) {
     final ButtonStyle btnStyle = ElevatedButton.styleFrom(
+        primary: const Color.fromARGB(255, 27, 42, 74),
         textStyle: const TextStyle(
             fontSize: 20,
             fontFamily: 'GeneralSans',
@@ -131,6 +132,16 @@ class _LoginScreenState extends State<LoginScreen> {
                           _buildEmailField(),
                           const SizedBox(height: 20.0),
                           _buildPasswordField(),
+                          Container(
+                            alignment: Alignment.centerRight,
+                            child: TextButton(
+                              onPressed: () => print('forgot pass'),
+                              // contentPadding: EdgeInsets.only(right: 0.0),
+                              child: const Text('Forgot Password?',
+                                  style: TextStyle(
+                                      color: Color.fromARGB(221, 23, 23, 23))),
+                            ),
+                          ),
                           const SizedBox(height: 50.0),
                           ElevatedButton(
                             style: btnStyle,
