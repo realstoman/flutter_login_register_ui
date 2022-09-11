@@ -19,22 +19,50 @@ class _LoginScreenState extends State<LoginScreen> {
 
   Widget _buildEmailField() {
     return TextFormField(
-      decoration: const InputDecoration(
+      decoration: InputDecoration(
         labelText: 'Email',
-        contentPadding: EdgeInsets.only(top: 14.0),
+        contentPadding: const EdgeInsets.only(top: 10.0, left: 10.0),
         // prefixIcon: Icon(Icons.email, color: Colors.black87),
         hintText: 'Enter your email',
+        fillColor: Colors.white,
+        focusedBorder: OutlineInputBorder(
+          borderRadius: BorderRadius.circular(5.0),
+          borderSide: const BorderSide(
+            color: Color.fromARGB(255, 8, 61, 104),
+          ),
+        ),
+        enabledBorder: OutlineInputBorder(
+          borderRadius: BorderRadius.circular(5.0),
+          borderSide: const BorderSide(
+            color: Color.fromARGB(255, 177, 177, 177),
+            width: 1.0,
+          ),
+        ),
       ),
     );
   }
 
   Widget _buildPasswordField() {
     return TextFormField(
-      decoration: const InputDecoration(
+      decoration: InputDecoration(
         labelText: 'Password',
-        contentPadding: EdgeInsets.only(top: 14.0),
+        contentPadding: const EdgeInsets.only(top: 10.0, left: 10.0),
         // prefixIcon: Icon(Icons.lock, color: Colors.black87),
         hintText: 'Enter your password',
+        fillColor: Colors.white,
+        focusedBorder: OutlineInputBorder(
+          borderRadius: BorderRadius.circular(5.0),
+          borderSide: const BorderSide(
+            color: Color.fromARGB(255, 8, 61, 104),
+          ),
+        ),
+        enabledBorder: OutlineInputBorder(
+          borderRadius: BorderRadius.circular(5.0),
+          borderSide: const BorderSide(
+            color: Color.fromARGB(255, 177, 177, 177),
+            width: 1.0,
+          ),
+        ),
       ),
     );
   }
@@ -81,16 +109,19 @@ class _LoginScreenState extends State<LoginScreen> {
             child: SingleChildScrollView(
               physics: const AlwaysScrollableScrollPhysics(),
               padding:
-                  const EdgeInsets.symmetric(horizontal: 40.0, vertical: 120.0),
+                  const EdgeInsets.symmetric(horizontal: 20.0, vertical: 120.0),
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: <Widget>[
-                  const Text('Sign in to Skill Academy',
-                      style: TextStyle(
-                          color: Colors.black87,
-                          fontFamily: 'GeneralSans',
-                          fontSize: 26.0,
-                          fontWeight: FontWeight.w500)),
+                  const Padding(
+                    padding: EdgeInsets.only(bottom: 40.0),
+                    child: Text('Sign in to Skill Academy',
+                        style: TextStyle(
+                            color: Colors.black87,
+                            fontFamily: 'GeneralSans',
+                            fontSize: 26.0,
+                            fontWeight: FontWeight.w500)),
+                  ),
                   Container(
                     margin: const EdgeInsets.all(20),
                     child: Form(
@@ -98,7 +129,7 @@ class _LoginScreenState extends State<LoginScreen> {
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: <Widget>[
                           _buildEmailField(),
-                          const SizedBox(height: 8.0),
+                          const SizedBox(height: 20.0),
                           _buildPasswordField(),
                           const SizedBox(height: 50.0),
                           ElevatedButton(
