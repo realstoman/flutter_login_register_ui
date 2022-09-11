@@ -23,9 +23,9 @@ class _AppHomeButtonsState extends State<AppHomeButtons> {
                 child: Column(
                   children: <Widget>[
                     Padding(
-                      padding: const EdgeInsets.symmetric(vertical: 8.0),
+                      padding: const EdgeInsets.symmetric(vertical: 10.0),
                       child: SizedBox(
-                        width: 290,
+                        width: 320,
                         height: 44,
                         child: OutlinedButton(
                           style: OutlinedButton.styleFrom(
@@ -51,7 +51,7 @@ class _AppHomeButtonsState extends State<AppHomeButtons> {
                       ),
                     ),
                     SizedBox(
-                      width: 290,
+                      width: 320,
                       height: 44,
                       child: OutlinedButton(
                         style: OutlinedButton.styleFrom(
@@ -85,9 +85,9 @@ class _AppHomeButtonsState extends State<AppHomeButtons> {
                       ),
                     ),
                     Padding(
-                      padding: const EdgeInsets.symmetric(vertical: 8.0),
+                      padding: const EdgeInsets.symmetric(vertical: 10.0),
                       child: SizedBox(
-                        width: 290,
+                        width: 320,
                         height: 44,
                         child: OutlinedButton(
                           style: OutlinedButton.styleFrom(

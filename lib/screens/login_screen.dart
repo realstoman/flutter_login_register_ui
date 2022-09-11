@@ -20,15 +20,17 @@ class _LoginScreenState extends State<LoginScreen> {
           const SizedBox(height: 10.0),
           Container(
             alignment: Alignment.centerLeft,
-            decoration: const BoxDecoration(),
+            decoration: const BoxDecoration(
+              color: Colors.white,
+            ),
             height: 60.0,
             child: const TextField(
               keyboardType: TextInputType.emailAddress,
-              style: TextStyle(color: Colors.white),
+              style: TextStyle(color: Colors.black87),
               decoration: InputDecoration(
                 border: InputBorder.none,
                 contentPadding: EdgeInsets.only(top: 14.0),
-                prefixIcon: Icon(Icons.email, color: Colors.white),
+                prefixIcon: Icon(Icons.email, color: Colors.black87),
                 hintText: 'Enter your email',
               ),
             ),
@@ -45,15 +47,17 @@ class _LoginScreenState extends State<LoginScreen> {
           const SizedBox(height: 10.0),
           Container(
             alignment: Alignment.centerLeft,
-            decoration: const BoxDecoration(),
+            decoration: const BoxDecoration(
+              color: Colors.white,
+            ),
             height: 60.0,
             child: const TextField(
               obscureText: true,
-              style: TextStyle(color: Colors.white),
+              style: TextStyle(color: Colors.black87),
               decoration: InputDecoration(
                 border: InputBorder.none,
                 contentPadding: EdgeInsets.only(top: 14.0),
-                prefixIcon: Icon(Icons.lock, color: Colors.white),
+                prefixIcon: Icon(Icons.lock, color: Colors.black87),
                 hintText: 'Enter your password',
               ),
             ),
@@ -94,8 +98,10 @@ class _LoginScreenState extends State<LoginScreen> {
                           fontSize: 30.0,
                           fontWeight: FontWeight.w500)),
                   const SizedBox(height: 30.0),
+                  // Email input field
                   _buildEmailTF(),
-                  SizedBox(height: 10.0),
+                  const SizedBox(height: 10.0),
+                  // Password input field
                   _buildPasswordTF(),
                 ],
               ),
