@@ -16,6 +16,7 @@ class _LoginScreenState extends State<LoginScreen> {
 
   // Note: This is a form key which is used to hold the state of our form and this is the recommended way to do so.
   final _formKey = GlobalKey<FormState>();
+  bool _rememberMe = false;
 
   Widget _buildEmailField() {
     return TextFormField(
@@ -63,6 +64,51 @@ class _LoginScreenState extends State<LoginScreen> {
             width: 1.0,
           ),
         ),
+      ),
+    );
+  }
+
+  Widget _buildForgotPasswordButton() {
+    return Container(
+      alignment: Alignment.centerRight,
+      child: TextButton(
+        onPressed: () => print('forgot pass'),
+        // contentPadding: EdgeInsets.only(right: 0.0),
+        child: const Text('Forgot Password?',
+            style: TextStyle(
+                fontSize: 15.0,
+                fontFamily: 'GeneralSans',
+                fontWeight: FontWeight.w500,
+                color: Color.fromARGB(221, 23, 23, 23))),
+      ),
+    );
+  }
+
+  Widget _buildRememberMeCheckBox() {
+    return Container(
+      child: Row(
+        children: <Widget>[
+          Theme(
+            data: ThemeData(
+                unselectedWidgetColor: Color.fromARGB(255, 177, 177, 177)),
+            child: Checkbox(
+              value: _rememberMe,
+              checkColor: Colors.white,
+              activeColor: const Color.fromARGB(221, 23, 23, 23),
+              onChanged: (bool? value) {
+                setState(() {
+                  _rememberMe = value!;
+                });
+              },
+            ),
+          ),
+          const Text('Remember me',
+              style: TextStyle(
+                  fontSize: 15.0,
+                  fontFamily: 'GeneralSans',
+                  fontWeight: FontWeight.w500,
+                  color: Color.fromARGB(221, 23, 23, 23)))
+        ],
       ),
     );
   }
@@ -132,16 +178,8 @@ class _LoginScreenState extends State<LoginScreen> {
                           _buildEmailField(),
                           const SizedBox(height: 20.0),
                           _buildPasswordField(),
-                          Container(
-                            alignment: Alignment.centerRight,
-                            child: TextButton(
-                              onPressed: () => print('forgot pass'),
-                              // contentPadding: EdgeInsets.only(right: 0.0),
-                              child: const Text('Forgot Password?',
-                                  style: TextStyle(
-                                      color: Color.fromARGB(221, 23, 23, 23))),
-                            ),
-                          ),
+                          _buildForgotPasswordButton(),
+                          _buildRememberMeCheckBox(),
                           const SizedBox(height: 50.0),
                           ElevatedButton(
                             style: btnStyle,
