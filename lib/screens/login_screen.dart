@@ -8,7 +8,7 @@ class LoginScreen extends StatefulWidget {
 }
 
 class _LoginScreenState extends State<LoginScreen> {
-  // Custom color
+  // Custom background color
   static const customBgColor = Color.fromARGB(255, 255, 255, 255);
 
   String _email = '';
@@ -18,6 +18,18 @@ class _LoginScreenState extends State<LoginScreen> {
   final _formKey = GlobalKey<FormState>();
   bool _rememberMe = false;
 
+  // Sign in button styles
+  final ButtonStyle btnStyle = ElevatedButton.styleFrom(
+      primary: const Color.fromARGB(255, 27, 42, 74),
+      elevation: 5.0,
+      padding: const EdgeInsets.all(10.0),
+      shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(5.0)),
+      textStyle: const TextStyle(
+          fontSize: 18,
+          fontFamily: 'GeneralSans',
+          fontWeight: FontWeight.w500));
+
+  // Email input field widget
   Widget _buildEmailField() {
     return TextFormField(
       decoration: InputDecoration(
@@ -43,6 +55,7 @@ class _LoginScreenState extends State<LoginScreen> {
     );
   }
 
+  // Password input field widget
   Widget _buildPasswordField() {
     return TextFormField(
       decoration: InputDecoration(
@@ -68,6 +81,7 @@ class _LoginScreenState extends State<LoginScreen> {
     );
   }
 
+  // Forgot password button widget
   Widget _buildForgotPasswordButton() {
     return Container(
       alignment: Alignment.centerRight,
@@ -84,6 +98,7 @@ class _LoginScreenState extends State<LoginScreen> {
     );
   }
 
+  // Remember me checkbox widget
   Widget _buildRememberMeCheckBox() {
     return Container(
       child: Row(
@@ -113,15 +128,21 @@ class _LoginScreenState extends State<LoginScreen> {
     );
   }
 
+  // Sign in button widget
+  Widget _buildSignInButton() {
+    return Container(
+      padding: const EdgeInsets.symmetric(vertical: 20.0),
+      width: double.infinity,
+      child: ElevatedButton(
+        style: btnStyle,
+        onPressed: () => print('Signed in'),
+        child: const Text('Sign in'),
+      ),
+    );
+  }
+
   @override
   Widget build(BuildContext context) {
-    final ButtonStyle btnStyle = ElevatedButton.styleFrom(
-        primary: const Color.fromARGB(255, 27, 42, 74),
-        textStyle: const TextStyle(
-            fontSize: 20,
-            fontFamily: 'GeneralSans',
-            fontWeight: FontWeight.w500));
-
     return Scaffold(
       backgroundColor: customBgColor,
       appBar: AppBar(
@@ -180,12 +201,8 @@ class _LoginScreenState extends State<LoginScreen> {
                           _buildPasswordField(),
                           _buildForgotPasswordButton(),
                           _buildRememberMeCheckBox(),
-                          const SizedBox(height: 50.0),
-                          ElevatedButton(
-                            style: btnStyle,
-                            onPressed: () {},
-                            child: const Text('Sign in'),
-                          ),
+                          const SizedBox(height: 35.0),
+                          _buildSignInButton(),
                         ],
                       ),
                     ),
