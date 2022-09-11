@@ -24,9 +24,6 @@ dev_dependencies:
 
 # Flutter specific packages
 flutter:
-
-  uses-material-design: true
-
   # Add project assets
   assets:
     - assets/images/
@@ -35,8 +32,10 @@ flutter:
   fonts:
     - family: GeneralSans
       fonts:
-        - asset: fonts/GeneralSans-Light.ttf
-        - asset: fonts/GeneralSans-Regular.ttf
-        - asset: fonts/GeneralSans-Medium.ttf
-        - asset: fonts/GeneralSans-Semibold.ttf
-        - asset: fonts/GeneralSans-Bold.ttf
+        - asset: assets/fonts/GeneralSans-Light.ttf
+        - asset: assets/fonts/GeneralSans-Regular.ttf
+        - asset: assets/fonts/GeneralSans-Medium.ttf
+        - asset: assets/fonts/GeneralSans-Semibold.ttf
+        - asset: assets/fonts/GeneralSans-Bold.ttf
+  
+  uses-material-design: true
