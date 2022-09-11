@@ -53,7 +53,7 @@ class _AppHomeButtonsState extends State<AppHomeButtons> {
                       child: OutlinedButton(
                         style: OutlinedButton.styleFrom(
                           primary: Colors.white,
-                          textStyle: const TextStyle(fontSize: 16),
+                          textStyle: const TextStyle(fontSize: 17),
                           side: const BorderSide(color: Colors.white60),
                           shape: const RoundedRectangleBorder(
                               borderRadius:
@@ -62,10 +62,22 @@ class _AppHomeButtonsState extends State<AppHomeButtons> {
                         onPressed: () => Navigator.of(context).push(
                             MaterialPageRoute(
                                 builder: (context) => const RegisterScreen())),
-                        child: const Text('Continue with GitHub',
-                            style: TextStyle(
-                                fontFamily: 'GeneralSans',
-                                fontWeight: FontWeight.w400)),
+                        child: Row(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          children: [
+                            SizedBox(
+                              width: 40,
+                              child: Image.asset(
+                                  'assets/images/github-icon.png',
+                                  width: 40,
+                                  height: 20),
+                            ),
+                            const Text('Continue with GitHub',
+                                style: TextStyle(
+                                    fontFamily: 'GeneralSans',
+                                    fontWeight: FontWeight.w400)),
+                          ],
+                        ),
                       ),
                     ),
                     Padding(
