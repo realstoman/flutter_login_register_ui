@@ -11,75 +11,31 @@ class _LoginScreenState extends State<LoginScreen> {
   // Custom color
   static const customBgColor = Color.fromARGB(255, 255, 255, 255);
 
-  Widget _buildEmailTF() {
-    return Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children: <Widget>[
-          const Text('Email',
-              style: TextStyle(color: Colors.white, fontFamily: 'GeneralSans')),
-          const SizedBox(height: 10.0),
-          Container(
-            alignment: Alignment.centerLeft,
-            decoration: const BoxDecoration(
-              color: Colors.white,
-            ),
-            height: 60.0,
-            child: const TextField(
-              keyboardType: TextInputType.emailAddress,
-              style: TextStyle(color: Colors.black87),
-              decoration: InputDecoration(
-                border: InputBorder.none,
-                contentPadding: EdgeInsets.only(top: 14.0),
-                prefixIcon: Icon(Icons.email, color: Colors.black87),
-                hintText: 'Enter your email',
-              ),
-            ),
-          ),
-        ]);
-  }
-
-  Widget _buildPasswordTF() {
-    return Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children: <Widget>[
-          const Text('Password',
-              style: TextStyle(color: Colors.white, fontFamily: 'GeneralSans')),
-          const SizedBox(height: 10.0),
-          Container(
-            alignment: Alignment.centerLeft,
-            decoration: const BoxDecoration(
-              color: Colors.white,
-            ),
-            height: 60.0,
-            child: const TextField(
-              obscureText: true,
-              style: TextStyle(color: Colors.black87),
-              decoration: InputDecoration(
-                border: InputBorder.none,
-                contentPadding: EdgeInsets.only(top: 14.0),
-                prefixIcon: Icon(Icons.lock, color: Colors.black87),
-                hintText: 'Enter your password',
-              ),
-            ),
-          ),
-        ]);
-  }
-
   String _email = '';
   String _password = '';
 
   // Note: This is a form key which is used to hold the state of our form and this is the recommended way to do so.
-  final GlobalKey<FormState> _formKey = GlobalKey<FormState>();
+  final _formKey = GlobalKey<FormState>();
 
   Widget _buildEmailField() {
     return TextFormField(
-      decoration: const InputDecoration(labelText: 'Email'),
+      decoration: const InputDecoration(
+        labelText: 'Email',
+        contentPadding: EdgeInsets.only(top: 14.0),
+        prefixIcon: Icon(Icons.email, color: Colors.black87),
+        hintText: 'Enter your email',
+      ),
     );
   }
 
   Widget _buildPasswordField() {
     return TextFormField(
-      decoration: const InputDecoration(labelText: 'Password'),
+      decoration: const InputDecoration(
+        labelText: 'Password',
+        contentPadding: EdgeInsets.only(top: 14.0),
+        prefixIcon: Icon(Icons.lock, color: Colors.black87),
+        hintText: 'Enter your password',
+      ),
     );
   }
 
