@@ -22,7 +22,7 @@ class _LoginScreenState extends State<LoginScreen> {
       decoration: const InputDecoration(
         labelText: 'Email',
         contentPadding: EdgeInsets.only(top: 14.0),
-        prefixIcon: Icon(Icons.email, color: Colors.black87),
+        // prefixIcon: Icon(Icons.email, color: Colors.black87),
         hintText: 'Enter your email',
       ),
     );
@@ -33,7 +33,7 @@ class _LoginScreenState extends State<LoginScreen> {
       decoration: const InputDecoration(
         labelText: 'Password',
         contentPadding: EdgeInsets.only(top: 14.0),
-        prefixIcon: Icon(Icons.lock, color: Colors.black87),
+        // prefixIcon: Icon(Icons.lock, color: Colors.black87),
         hintText: 'Enter your password',
       ),
     );
@@ -55,6 +55,20 @@ class _LoginScreenState extends State<LoginScreen> {
           padding: EdgeInsets.only(
             left: 10.0,
             top: 33.0,
+          ),
+        ),
+        leading: IconButton(
+          onPressed: Navigator.of(context).pop,
+          icon: const Padding(
+            padding: EdgeInsets.only(
+              top: 21.0,
+              left: 25.0,
+            ),
+            child: Icon(
+              Icons.chevron_left,
+              color: Color.fromARGB(221, 23, 23, 23),
+              size: 35,
+            ),
           ),
         ),
         elevation: 0.0,
