@@ -36,6 +36,31 @@ class _LoginScreenState extends State<LoginScreen> {
         ]);
   }
 
+  Widget _buildPasswordTF() {
+    return Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: <Widget>[
+          const Text('Password',
+              style: TextStyle(color: Colors.white, fontFamily: 'GeneralSans')),
+          const SizedBox(height: 10.0),
+          Container(
+            alignment: Alignment.centerLeft,
+            decoration: const BoxDecoration(),
+            height: 60.0,
+            child: const TextField(
+              obscureText: true,
+              style: TextStyle(color: Colors.white),
+              decoration: InputDecoration(
+                border: InputBorder.none,
+                contentPadding: EdgeInsets.only(top: 14.0),
+                prefixIcon: Icon(Icons.lock, color: Colors.white),
+                hintText: 'Enter your password',
+              ),
+            ),
+          ),
+        ]);
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -70,6 +95,8 @@ class _LoginScreenState extends State<LoginScreen> {
                           fontWeight: FontWeight.w500)),
                   const SizedBox(height: 30.0),
                   _buildEmailTF(),
+                  SizedBox(height: 10.0),
+                  _buildPasswordTF(),
                 ],
               ),
             ),
