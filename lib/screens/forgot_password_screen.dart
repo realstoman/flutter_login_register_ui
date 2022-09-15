@@ -55,6 +55,19 @@ class _ForgotPasswordScreenState extends State<ForgotPasswordScreen> {
     );
   }
 
+  // Sign in button widget
+  Widget _buildPasswordResentButton() {
+    return Container(
+      padding: const EdgeInsets.symmetric(vertical: 20.0),
+      width: double.infinity,
+      child: ElevatedButton(
+        style: btnStyle,
+        onPressed: () => print('Reset link sent'),
+        child: const Text('Send reset link'),
+      ),
+    );
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -111,6 +124,8 @@ class _ForgotPasswordScreenState extends State<ForgotPasswordScreen> {
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: <Widget>[
                           _buildEmailField(),
+                          const SizedBox(height: 35.0),
+                          _buildPasswordResentButton(),
                         ],
                       ),
                     ),
