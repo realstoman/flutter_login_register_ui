@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_login_register_ui/screens/forgot_password_screen.dart';
 
 class LoginScreen extends StatefulWidget {
   const LoginScreen({Key? key}) : super(key: key);
@@ -86,7 +87,11 @@ class _LoginScreenState extends State<LoginScreen> {
     return Container(
       alignment: Alignment.centerRight,
       child: TextButton(
-        onPressed: () => print('forgot pass'),
+        onPressed: () {
+          Navigator.of(context).push(MaterialPageRoute(
+            builder: (context) => const ForgotPasswordScreen(),
+          ));
+        },
         // contentPadding: EdgeInsets.only(right: 0.0),
         child: const Text('Forgot Password?',
             style: TextStyle(
