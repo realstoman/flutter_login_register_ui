@@ -63,9 +63,34 @@ class _AppHomeButtonsState extends State<AppHomeButtons> {
                               borderRadius:
                                   BorderRadius.all(Radius.circular(20))),
                         ),
-                        onPressed: () => Navigator.of(context).push(
-                            MaterialPageRoute(
-                                builder: (context) => const RegisterScreen())),
+                        onPressed: () {
+                          showDialog(
+                            context: context,
+                            builder: (context) => AlertDialog(
+                              title: const Text('Coming Soon...',
+                                  style: TextStyle(
+                                      fontSize: 24,
+                                      fontWeight: FontWeight.w600,
+                                      fontFamily: 'GeneralSans')),
+                              content: const Text(
+                                  "I'll add this feature in the future with GitHub auth. Check back soon.",
+                                  style: TextStyle(
+                                      fontSize: 18,
+                                      fontWeight: FontWeight.w500,
+                                      fontFamily: 'GeneralSans')),
+                              actions: [
+                                TextButton(
+                                  child: const Text('Ok Boss',
+                                      style: TextStyle(
+                                          fontSize: 20,
+                                          fontWeight: FontWeight.w500,
+                                          fontFamily: 'GeneralSans')),
+                                  onPressed: () => Navigator.pop(context),
+                                )
+                              ],
+                            ),
+                          );
+                        },
                         child: Row(
                           mainAxisAlignment: MainAxisAlignment.center,
                           children: [
@@ -100,10 +125,34 @@ class _AppHomeButtonsState extends State<AppHomeButtons> {
                                 borderRadius:
                                     BorderRadius.all(Radius.circular(20))),
                           ),
-                          onPressed: () => Navigator.of(context).push(
-                              MaterialPageRoute(
-                                  builder: (context) =>
-                                      const RegisterScreen())),
+                          onPressed: () {
+                            showDialog(
+                              context: context,
+                              builder: (context) => AlertDialog(
+                                title: const Text('Coming Soon...',
+                                    style: TextStyle(
+                                        fontSize: 24,
+                                        fontWeight: FontWeight.w600,
+                                        fontFamily: 'GeneralSans')),
+                                content: const Text(
+                                    "I'll add this feature in the future with Google Firebase. Check back soon.",
+                                    style: TextStyle(
+                                        fontSize: 18,
+                                        fontWeight: FontWeight.w500,
+                                        fontFamily: 'GeneralSans')),
+                                actions: [
+                                  TextButton(
+                                    child: const Text('Ok Boss',
+                                        style: TextStyle(
+                                            fontSize: 20,
+                                            fontWeight: FontWeight.w500,
+                                            fontFamily: 'GeneralSans')),
+                                    onPressed: () => Navigator.pop(context),
+                                  )
+                                ],
+                              ),
+                            );
+                          },
                           child: Row(
                             mainAxisAlignment: MainAxisAlignment.center,
                             children: [
