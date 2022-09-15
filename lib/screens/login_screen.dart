@@ -23,7 +23,7 @@ class _LoginScreenState extends State<LoginScreen> {
       primary: const Color.fromARGB(255, 27, 42, 74),
       elevation: 5.0,
       padding: const EdgeInsets.all(10.0),
-      shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(5.0)),
+      shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(20.0)),
       textStyle: const TextStyle(
           fontSize: 18,
           fontFamily: 'GeneralSans',

@@ -23,7 +23,7 @@ class _RegisterScreenState extends State<RegisterScreen> {
       primary: const Color.fromARGB(255, 27, 42, 74),
       elevation: 5.0,
       padding: const EdgeInsets.all(10.0),
-      shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(5.0)),
+      shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(20.0)),
       textStyle: const TextStyle(
           fontSize: 18,
           fontFamily: 'GeneralSans',
@@ -107,7 +107,7 @@ class _RegisterScreenState extends State<RegisterScreen> {
     );
   }
 
-  // Forgot password button widget
+  // Login instead button widget
   Widget _buildLoginInsteadButton() {
     return Container(
       alignment: Alignment.centerRight,
@@ -228,6 +228,7 @@ class _RegisterScreenState extends State<RegisterScreen> {
                           const SizedBox(height: 20.0),
                           _buildPasswordField(),
                           _buildLoginInsteadButton(),
+                          const SizedBox(height: 20.0),
                           _buildRememberMeCheckBox(),
                           const SizedBox(height: 35.0),
                           _buildSignInButton(),
