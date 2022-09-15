@@ -1,6 +1,6 @@
 # Flutter Login & Register UI
 
-Just in case if you feel lack of inspiration, here I have created a simple login and register screens ui for flutter.
+Just in case if you feel lack of inspiration, here I have created a simple login and register screens UI for flutter.
 
 Home Screen            |  UI GIF Demo
 :-------------------------:|:-------------------------:
