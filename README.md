@@ -2,9 +2,9 @@
 
 Just in case if you feel lack of inspiration, here I have created a simple login and register screens ui for flutter.
 
-![home_screen](https://user-images.githubusercontent.com/16396664/190355051-cd361394-4de1-44a0-bc30-a045a0228566.png)
-
-![ezgif com-gif-maker](https://user-images.githubusercontent.com/16396664/190354883-4cdeeb4f-6ffc-4a16-9cc6-fe98dba8a219.gif)
+Home Screen            |  UI GIF Demo
+:-------------------------:|:-------------------------:
+![home_screen](https://user-images.githubusercontent.com/16396664/190355051-cd361394-4de1-44a0-bc30-a045a0228566.png)  |  ![ezgif com-gif-maker](https://user-images.githubusercontent.com/16396664/190354883-4cdeeb4f-6ffc-4a16-9cc6-fe98dba8a219.gif)
 
 ## Features
 
@@ -14,39 +14,31 @@ Just in case if you feel lack of inspiration, here I have created a simple login
 
 ## Installation
 
-1. ##### Make sure you have Node JS installed. If you don't have it:
+1. ##### Make sure you have Flutter installed, if you don't have it:
 
--   [Download it from nodejs.org](https://nodejs.org)
--   [Install it using NVM ](https://github.com/nvm-sh/nvm)
--   If you're on Mac, Homebrew is a good option too:
+-   [Download it from flutter.dev for your OS](https://docs.flutter.dev/get-started/install)
 
-```
-brew install node
-```
 
-2. ##### Clone the repo:
+2. ##### Clone this repo:
 
 ```
-git clone https://github.com/realstoman/vuejs-tailwindcss-portfolio.git
+git clone https://github.com/realstoman/flutter_login_register_ui
 ```
 
 3. ##### Open the project folder:
 
 ```
-cd vuejs-tailwindcss-portfolio
+cd flutter_login_register_ui
 ```
 
 4. ##### Install packages and dependencies:
 
 ```
-npm install
+flutter pub get
 ```
 
-5. ##### Start a local dev server at `http://localhost:8080`:
+5. ##### View the project in Xcode simulator or Android Studio emulator
 
-```
-npm run serve
-```
 
 ## Notes
 
