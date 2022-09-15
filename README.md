@@ -11,6 +11,7 @@ Home Screen            |  UI GIF Demo
 -   Clean design
 -   Separate widgets
 -   Dialog popups
+-   Custom fonts
 
 ## Installation
 
