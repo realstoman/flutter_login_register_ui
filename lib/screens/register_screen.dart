@@ -33,7 +33,7 @@ class _RegisterScreenState extends State<RegisterScreen> {
   Widget _buildFullNameField() {
     return TextFormField(
       decoration: InputDecoration(
-        labelText: 'FullnName',
+        labelText: 'Full Name',
         contentPadding: const EdgeInsets.only(top: 10.0, left: 10.0),
         // prefixIcon: Icon(Icons.email, color: Colors.black87),
         hintText: 'Enter full name',
