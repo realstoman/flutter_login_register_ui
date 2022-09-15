@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_login_register_ui/screens/login_screen.dart';
 
 class RegisterScreen extends StatefulWidget {
   const RegisterScreen({Key? key}) : super(key: key);
@@ -112,7 +113,11 @@ class _RegisterScreenState extends State<RegisterScreen> {
     return Container(
       alignment: Alignment.centerRight,
       child: TextButton(
-        onPressed: () => print('forgot pass'),
+        onPressed: () {
+          Navigator.of(context).push(MaterialPageRoute(
+            builder: (context) => const LoginScreen(),
+          ));
+        },
         // contentPadding: EdgeInsets.only(right: 0.0),
         child: const Text('Already have an account? Login instead',
             style: TextStyle(
