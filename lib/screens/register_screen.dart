@@ -29,6 +29,32 @@ class _RegisterScreenState extends State<RegisterScreen> {
           fontFamily: 'GeneralSans',
           fontWeight: FontWeight.w500));
 
+  // Full name input field widget
+  Widget _buildFullNameField() {
+    return TextFormField(
+      decoration: InputDecoration(
+        labelText: 'FullnName',
+        contentPadding: const EdgeInsets.only(top: 10.0, left: 10.0),
+        // prefixIcon: Icon(Icons.email, color: Colors.black87),
+        hintText: 'Enter full name',
+        fillColor: Colors.white,
+        focusedBorder: OutlineInputBorder(
+          borderRadius: BorderRadius.circular(5.0),
+          borderSide: const BorderSide(
+            color: Color.fromARGB(255, 27, 42, 74),
+          ),
+        ),
+        enabledBorder: OutlineInputBorder(
+          borderRadius: BorderRadius.circular(5.0),
+          borderSide: const BorderSide(
+            color: Color.fromARGB(131, 177, 177, 177),
+            width: 1.0,
+          ),
+        ),
+      ),
+    );
+  }
+
   // Email input field widget
   Widget _buildEmailField() {
     return TextFormField(
@@ -82,13 +108,13 @@ class _RegisterScreenState extends State<RegisterScreen> {
   }
 
   // Forgot password button widget
-  Widget _buildForgotPasswordButton() {
+  Widget _buildLoginInsteadButton() {
     return Container(
       alignment: Alignment.centerRight,
       child: TextButton(
         onPressed: () => print('forgot pass'),
         // contentPadding: EdgeInsets.only(right: 0.0),
-        child: const Text('Forgot Password?',
+        child: const Text('Already have an account? Login instead',
             style: TextStyle(
                 fontSize: 15.0,
                 fontFamily: 'GeneralSans',
@@ -196,10 +222,12 @@ class _RegisterScreenState extends State<RegisterScreen> {
                       child: Column(
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: <Widget>[
+                          _buildFullNameField(),
+                          const SizedBox(height: 20.0),
                           _buildEmailField(),
                           const SizedBox(height: 20.0),
                           _buildPasswordField(),
-                          _buildForgotPasswordButton(),
+                          _buildLoginInsteadButton(),
                           _buildRememberMeCheckBox(),
                           const SizedBox(height: 35.0),
                           _buildSignInButton(),
