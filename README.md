@@ -13,7 +13,11 @@ Home Screen            |  UI GIF Demo
 -   Dialog popups
 -   Custom fonts
 
-## Installation
+## To Contribute to this project:
+
+[See Contribution Guidlines](https://github.com/realstoman/flutter_login_register_ui/blob/main/CONTRIBUTING.md)
+
+## Setup
 
 1. ##### Make sure you have Flutter installed, if you don't have it:
 
@@ -49,3 +53,7 @@ flutter pub get
 -   Illustrations from [unDraw](https://undraw.co)
 -   Feel free to use it for your projects
 -   Contributions are welcome
+
+
+### License
+[MIT](https://github.com/realstoman/flutter_login_register_ui/blob/main/LICENSE)
